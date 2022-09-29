@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="index.css">
+    <script src="index.js">  </script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>To Do List</title>
+</head>
+<body>
+
+    <!-- Tab links -->
+<div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'Portfolio list')">Portfolio list</button>
+    <button class="tablinks" onclick="openTab(event, 'New Tab1')">New Tab1</button>
+    <button class="tablinks" onclick="openTab(event, 'New Tab2')">New Tab2</button>
+</div>
+  
+  <!-- Tab content -->
+  <div id="Portfolio list" class="tabcontent">
+    <h3>Portfolio List</h3>
+    <!--To do list Container-->
+    <div class="container">
+        <ul id="incomplete-tasks">
+            <li><input type="checkbox"><label>Pay Bills</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+        </ul>
+
+        <p>
+            <input id="new-task" type="text"><button>Add</button>
+        </p>
+    </div>
+  </div>
+  
+  <div id="New Tab1" class="tabcontent">
+    <h3>New Tab1</h3>
+    <!--To do list Container-->
+    <div class="container">
+        <ul id="incomplete-tasks">
+            <li><input type="checkbox"><label>Go Shopping</label><input type="text" value="Go Shopping"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+        </ul>
+
+        <p>
+            <input id="new-task" type="text"><button>Add</button>
+        </p>
+    </div>
+  </div>
+  
+  <div id="New Tab2" class="tabcontent">
+    <h3>New Tab2</h3>
+    <p>List new tasks here.</p>
+</div>
+
+
+
+</body>
+
+</html>
