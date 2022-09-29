@@ -8,7 +8,7 @@
 
 ```
 This application allows users to keep track of their day to day tasks. 
-Users can add, edit, delete, and move items created on the list. Each tab represents the project name. Users can create multiple tabs and fill the project name as the tab header. There are 5 color choices for the header tabs. Users can set the status to completed, delayed, or in progress. 
+Users can add, edit, delete, and move items created on the list. Each tab represents the project name. Users can create multiple tabs and fill the project name as the tab header. There are 5 color choices for the header tabs. Once completed, users can check off the task which is moved to a completed tab. 
 
 Used: HTML, CSS, JavaScript
 ```
@@ -32,9 +32,17 @@ Move items on the list
 
 Create multiple tabs
 
-Customizations: 
+Check off completed tasks
 
-Set status: in progress (blue), delayed(red), completed (green + crossed out) 
+All completed tasks from each project can be viewed on the *Completed task tab*
+```
+
+Customizations
+```
+Name tabs by project name
+
+Choose between 5 tab colors 
+
 ```
 
 ---
