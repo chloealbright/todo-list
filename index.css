@@ -1,187 +1,148 @@
 /* Style the tab */
 .tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-  }
-  
-  /* Style the buttons that are used to open the tab content */
-  .tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-  }
-  
-  /* Change background color of buttons on hover */
-  .tab button:hover {
-    background-color: #ddd;
-  }
-  
-  /* Create an active/current tablink class */
-  .tab button.active {
-    background-color: #ccc;
-  }
-  
-  /* Style the tab content */
-  .tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-  }
-
-  /*TO DO LIST START*/
-  .container {
-	display: block;
-	width: 400px;
-	margin: 10px auto 100px;
-	background-color:#fff;
-	padding:0px 10px 10px 10px;
-	border-radius:10px
+overflow: hidden;
+border: 1px solid #ccc;
+background-color: #f1f1f1;
 }
 
-h2 {
-	text-align:center;
-	padding-top:10px;
-	margin-bottom:0px;
+/* Style the buttons that are used to open the tab content */
+.tab button, a {
+background-color: inherit;
+float: left;
+border: none;
+outline: none;
+cursor: pointer;
+padding: 14px 16px;
+transition: 0.3s;
 }
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+background-color: #ccc;
+}
+
+/* Basic Style */
+
+body {
+	background: #fff;
+	color: #333;
+	font-family: Lato, sans-serif;
+	background-color:#e4e4e4;
+}
+
+/*TO DO LIST START*/
+
+/*FROM TOGGLE CONTENT USED FOR LIST CONTENT*/
+.tabcontent {
+background-color:#fff;
+display: none;
+padding: 5px;
+border: 1px solid #ccc;
+border-top: none;
+}
+
+/*FROM TODO LIST*/
 
 ul {
 	margin: 0;
 	padding: 0;
 }
-
 li * {
 	float: left;
 }
 
-li,
-h3 {
-	clear: both;
-	list-style: none;
-}
 
-input,
-button {
-	outline: none;
-}
-
-button {
-	background: none;
-	border: 0px;
-	color: #888;
-	font-size: 15px;
-	width: 60px;
-	margin: 10px 0 0;
-	font-family: Lato, sans-serif;
+ul li {
 	cursor: pointer;
-}
-
-button:hover {
-	color: #333;
-}
-
-
-/* Heading */
-
-h3,
-label[for='new-task'] {
-	color: #333;
-	font-weight: 700;
-	font-size: 15px;
-	border-bottom: 2px solid #333;
-	padding: 20px 0 10px;
-	margin: 0;
-	text-transform: uppercase;
-}
-
-input[type="text"] {
-	margin: 0;
+	position: inherit;
+	padding: 14px 16px;
+	list-style-type: none;
+	background: #eee;
 	font-size: 18px;
-	line-height: 18px;
-	height: 18px;
-	padding: 10px;
-	border: 1px solid #ddd;
-	background: #fff;
-	border-radius: 6px;
-	font-family: Lato, sans-serif;
-	color: #888;
-}
-
-input[type="text"]:focus {
-	color: #333;
-}
-
-
-/* New Task */
-
-label[for='new-task'] {
-	display: block;
-	margin: 0 0 20px;
-}
-
-input#new-task {
-	float: left;
-	width: 318px;
-}
-
-p > button:hover {
-	color: #0FC57C;
-}
-
-
-/* Task list */
-
-li {
-	overflow: hidden;
-	padding: 20px 0;
-	border-bottom: 1px solid #eee;
-}
-
-li > input[type="checkbox"] {
-	margin: 0 10px;
-	position: relative;
-	top: 15px;
-}
-
-li > label {
-	font-size: 18px;
-	line-height: 40px;
-	width: 237px;
-	padding: 0 0 0 11px;
-}
-
-li > input[type="text"] {
-	width: 226px;
-}
-
-li > .delete:hover {
-	color: #CF2323;
-}
-
-
-/* Completed */
-
-#completed-tasks label {
+	transition: 0.2s;
+	
+	/* make the list items unselectable */
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  }
+  
+  /* Set all odd list items to a different color (zebra-stripes) */
+  ul li:nth-child(odd) {
+	background: #f9f9f9;
+  }
+  
+  /* Darker background-color on hover */
+  ul li:hover {
+	background: #ddd;
+  }
+  
+  /* When clicked on, add a background color and strike out text */
+  ul li.checked {
+	background: #888;
+	color: #fff;
 	text-decoration: line-through;
-	color: #888;
-}
+  }
+  
+  /* Add a "checked" mark when clicked on */
+  ul li.checked::before {
+	content: '';
+	position: absolute;
+	border-color: #fff;
+	border-style: solid;
+	border-width: 0 2px 2px 0;
+	top: 10px;
+	left: 16px;
+	transform: rotate(45deg);
+	height: 15px;
+	width: 7px;
+  }
+  
+  /* Style the close button */
+  .close {
+	display:inline-table;
+	padding: 5px;
+	float: left;
+  }
+  
+  .close:hover {
+	background-color: #f0b3f0;
+	color: white;
+  }
 
-
-/* Edit Task */
-
-ul li input[type=text] {
-	display: none;
-}
-
-ul li.editMode input[type=text] {
-	display: block;
-}
-
-ul li.editMode label {
-	display: none;
-}
+  /* Style the input */
+input {
+	margin: 0;
+	border: none;
+	border-radius: 0;
+	width: 20%;
+	padding: 10px;
+	float: left;
+	font-size: 16px;
+  }
+ 
+  
+  /* Style the "Add" button */
+  .addBtn {
+	padding: 10px;
+	width: 15%;
+	background: #d9d9d9;
+	color: #555;
+	float: left;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+	transition: 0.3s;
+	border-radius: 0;
+  }
+  
+  .addBtn:hover {
+	background-color: #bbb;
+  }
+  

@@ -9,49 +9,47 @@
 </head>
 <body>
 
-    <!-- Tab links -->
+    <!-- Toggle bar -->
 <div class="tab">
-    <button class="tablinks" onclick="openTab(event, 'Portfolio list')">Portfolio list</button>
-    <button class="tablinks" onclick="openTab(event, 'New Tab1')">New Tab1</button>
-    <button class="tablinks" onclick="openTab(event, 'New Tab2')">New Tab2</button>
+    <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'List')">List</button>
+        <script>
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+        </script>
+   <a href="#" class="tablinks" onclick="window.open('index.html')">+</a>      
 </div>
   
-  <!-- Tab content -->
-  <div id="Portfolio list" class="tabcontent">
-    <h3>Portfolio List</h3>
-    <!--To do list Container-->
-    <div class="container">
-        <ul id="incomplete-tasks">
-            <li><input type="checkbox"><label>Pay Bills</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
-        </ul>
+  <!-- Tab Lists -->
+<div id="List" class="tabcontent"> <!-- Edit Name on right click-->
+    <h3>List</h3><!-- Matches List Tab Name -->
+    <!--To do list tabcontent-->
+   
+    <ul id="myUL">
+        <li></li>
+    </ul>
 
-        <p>
-            <input id="new-task" type="text"><button>Add</button>
-        </p>
-    </div>
-  </div>
-  
-  <div id="New Tab1" class="tabcontent">
-    <h3>New Tab1</h3>
-    <!--To do list Container-->
-    <div class="container">
-        <ul id="incomplete-tasks">
-            <li><input type="checkbox"><label>Go Shopping</label><input type="text" value="Go Shopping"><button class="edit">Edit</button><button class="delete">Delete</button></li>
-        </ul>
-
-        <p>
-            <input id="new-task" type="text"><button>Add</button>
-        </p>
-    </div>
-  </div>
-  
-  <div id="New Tab2" class="tabcontent">
-    <h3>New Tab2</h3>
-    <p>Could be for the drawing tab.</p>
+    <input type="text" id="myInput" placeholder="New Task"><!--alternative tag <button>+</button>-->
+    <span onclick="newElement()" class="addBtn">+</span>
+    
 </div>
+  
+<div id="+" class="tabcontent">
+    <h3>New List</h3> <!-- Matches List Tab Name -->
+    <!--To do list tabcontent-->
+    <div class="tabcontent">
+        <ul id="myUL">
+            <li></li>
+        </ul>
 
+        <input type="text" id="myInput" placeholder="New Task">
+        <span onclick="newElement()" class="addBtn">+</span>
+    </div>
+</div>
 
 
 </body>
-
 </html>
+
+
+  
+  
